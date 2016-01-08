@@ -70,6 +70,19 @@ class DefaultDirectoryNamer
 
         return $dirName;
     }
+    
+    function nodeRename(PropertyMapping $propertyMapping, $fileName, $params)
+    {
+
+        $obj = $propertyMapping->getObj();
+
+        $id = isset($params['id']) && $params['id'] ? strtolower($params['id']) : 'id';
+        $id = $obj->{'get' . ucfirst($id)}();
+        $nodeId = ceil($id / 100);
+        $dirName = $nodeId.'/'.$id;
+
+        return $dirName;
+    }
 
 
 }
