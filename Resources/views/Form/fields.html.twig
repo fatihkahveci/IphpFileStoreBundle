@@ -21,7 +21,7 @@
                     {% if show_preview %}
                         {% if file_data.width is defined %}
                             <td><a href="http://cdn.webtekno.com{{ fileUrl }}" target="_blank" class="full-img-link"><img
-                                            src="{{ fileUrl }}"
+                                            src="http://cdn.webtekno.com{{ fileUrl }}"
                                             width="{{  file_data .width > 200 ? 200 :  file_data.width }}" border="0"></a>
                             </td>
                             <td>&nbsp;&nbsp;&nbsp;</td>
